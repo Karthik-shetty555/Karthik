@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        function prog()
+        {
+            nve=0;
+            var c=document.getElementsByName("STD");
+            var pro=document.getElementById("STUD");
+            for(i=0;i<c.length;i++)
+            {
+                if(c[i].validity.valid)
+                {
+                    nve++;
+                }
+            }
+            
+            pro.value=nve*20;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        NAME:   <input type="text" name="STD" onchange="prog()" required>
+        <br>
+        <br>
+        DOB:    <input type="date" name="STD" onchange="prog()" required>
+        <br>
+        <br>
+        E-MAIL: <input type="email" name="STD" onchange="prog()" required>
+        <br>
+        <br>
+        NUMBER:<input type="text" pattern="[0-9]{10}" name="STD" onchange="prog()" required>
+        <br>
+        <br>
+        CITY:<input type="text" name="STD" onchange="prog()" required>
+        <br>
+        <br>
+        <progress id="STUD" value="0" max="100"></progress>
+    </form>
+
+</body>
+</html>
